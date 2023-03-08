@@ -1,0 +1,18 @@
+﻿@model BirtdayApplication.Models.InviteModel
+@{
+    ViewData["Title"] = "Teşekkür Ederim";
+}
+
+<h1>Teşekkürler, @Model.Name!</h1>
+
+<div class="lead">
+    @if(Model.State == true)
+    {
+        @:Gelmene çok sevindim :) Bütün hazırlıklar tamamlandı...!
+        @Html.ActionLink("Katilanlar","Home")
+        ;
+    }else
+    {
+        @:Gelmeyecek olmana çok üzüldüm :( Bunu bildirdiğin için teşekkür ederim.
+    }
+</div>
